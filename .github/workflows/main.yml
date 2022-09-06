@@ -33,4 +33,4 @@ jobs:
       run: |
         cargo -Vv
         rustc -Vv
-        cargo t --features http2 --test easy
+        cargo t --features http2 --test eric
