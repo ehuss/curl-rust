@@ -14,8 +14,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
-      with:
-        submodules: true
+      # with:
+      #   submodules: true
     - uses: actions/cache@v3
       with:
         path: |
@@ -29,6 +29,7 @@ jobs:
       run: |
         cargo -Vv
         rustc -Vv
+        git submodule update --init
         (cd curl-sys/curl && git checkout 92179353e5cac4cfb294a1fdcbdbf5d682fc40a1)
         cargo t --features http2 --test eric
         (cd curl-sys/curl && git checkout 8beff4355956e3d18ceb3afc21c1f3edec82543c)
