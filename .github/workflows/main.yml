@@ -12,10 +12,6 @@ defaults:
 jobs:
   test:
     runs-on: windows-latest
-    env:
-      CARGO_PROFILE_DEV_DEBUG: 1
-      CARGO_PROFILE_TEST_DEBUG: 1
-      CARGO_INCREMENTAL: 0
     steps:
     - uses: actions/checkout@v3
       with:
@@ -33,4 +29,4 @@ jobs:
       run: |
         cargo -Vv
         rustc -Vv
-        cargo t --features http2 --test eric
+        cargo t --test eric
