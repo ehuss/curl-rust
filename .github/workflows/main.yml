@@ -18,6 +18,8 @@ jobs:
       CARGO_INCREMENTAL: 0
     steps:
     - uses: actions/checkout@v3
+      with:
+        submodules: true
     - name: run tests
       run: |
         cargo run --example eric
