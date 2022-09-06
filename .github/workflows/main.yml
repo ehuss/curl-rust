@@ -29,4 +29,9 @@ jobs:
       run: |
         cargo -Vv
         rustc -Vv
+        (cd curl-sys/curl && git checkout 92179353e5cac4cfb294a1fdcbdbf5d682fc40a1)
+        cargo t --features http2 --test eric
+        (cd curl-sys/curl && git checkout 8beff4355956e3d18ceb3afc21c1f3edec82543c)
+        cargo t --features http2 --test eric
+        (cd curl-sys/curl && git checkout ebe3fdb0e36b6fe8929e5fc90bbaf4e97f9cb962)
         cargo t --features http2 --test eric
