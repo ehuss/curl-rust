@@ -97,7 +97,7 @@ fn main() {
             .replace("@LIBCURL_LIBS@", "")
             .replace("@SUPPORT_FEATURES@", "")
             .replace("@SUPPORT_PROTOCOLS@", "")
-            .replace("@CURLVERSION@", "8.15.0"),
+            .replace("@CURLVERSION@", "8.16.0"),
     )
     .unwrap();
 
@@ -135,6 +135,7 @@ fn main() {
         .file("curl/lib/cf-h1-proxy.c")
         .file("curl/lib/cf-haproxy.c")
         .file("curl/lib/cf-https-connect.c")
+        .file("curl/lib/cf-ip-happy.c")
         .file("curl/lib/cf-socket.c")
         .file("curl/lib/cfilters.c")
         .file("curl/lib/conncache.c")
@@ -224,7 +225,6 @@ fn main() {
         .file("curl/lib/vauth/digest.c")
         .file("curl/lib/vauth/vauth.c")
         .file("curl/lib/version.c")
-        .file("curl/lib/vquic/curl_msh3.c")
         .file("curl/lib/vquic/curl_ngtcp2.c")
         .file("curl/lib/vquic/curl_osslq.c")
         .file("curl/lib/vquic/curl_quiche.c")
